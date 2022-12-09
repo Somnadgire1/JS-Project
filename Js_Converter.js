@@ -27,10 +27,10 @@ function toselectedvalue(){
     const sheading =document.querySelector(".sheading");
 
 if(selectedvaluee==="Octal"){
-    sheading.textContent="To Octal no";
+    sheading.textContent="Octal";
 }
 else if(selectedvaluee==="Decimal"){
-  sheading.textContent="To Decimal no";
+  sheading.textContent="Decimal";
 }   
 else if(selectedvaluee==="Hexadecimal"){
   sheading.textContent="Hexadecimal";
