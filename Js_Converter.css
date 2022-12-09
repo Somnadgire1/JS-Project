@@ -5,38 +5,45 @@
     padding: 0;
 }
 
-body,
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 body {
-    background-color: rgb(245, 105, 253);
+    background: url("https://th.bing.com/th/id/OIP.BcCA-vhNbvJUGR3yL0p6xwHaDf?pid=ImgDet&rs=1");
+    background-size: cover;
     min-height: 100vh;
 }
-
-main {
-    background-image: url("https://images.pexels.com/photos/220067/pexels-photo-220067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    padding: 100px 60px;
-    border-radius: 10px;
+#all{
+    border: 1px solid white;
+    margin-top: 20px;
 }
-main h1{
-    color: #f003c8;
-    font-weight: 700;
-}
-
-#select-container {
+.main {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    padding: 20px;
+    border: 1px solid white;
+    background-color: aquamarine;
+    
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #47063d;
+    font-weight: bolder;
+}
+.main h2{
+    color: aqua;
+    font-size: 14px;
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-direction: row;
     font-size: 14px;
     font-weight: 700;
     color: rgb(4, 102, 20);
+    
 }
-
 select {
     font-size: 14px;
     font-weight: 700;
@@ -45,10 +52,9 @@ select {
     padding: 7px 50px;
     outline: none;
 }
-
 input {
     font-size: 14px;
-    font-weight: 700;
+    font-weight: bold;
     background-color: #fff;
     min-width: 350px;
     margin: 15px;
@@ -58,12 +64,7 @@ input {
     outline: none;
     transition: 0.5s;
 }
-
-input:focus {
-    box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.5);
-}
-
-#convert-button {
+.submit, .reset, .swap {
     font-size: 14px;
     font-weight: 700;
     padding: 7px 50px;
@@ -71,40 +72,21 @@ input:focus {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s transform;
+    
 }
 
-#convert-button:active {
+.submit, .reset, .swap:active {
     transform: scale(0.9);
 }
-
-#input-container {
-    font-size: 14px;
-    font-weight: 700;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-#error {
-    display: none;
-    color: #f00;
-    font-size: small;
-    margin: 0 0 10px 30px;
-    text-align: start;
-}
-
-#written-by-container {
+.value, .answer{
     display: flex;
     flex-direction: column;
+    padding: 20px;
     justify-content: center;
     align-items: center;
-    border: 2px solid #000;
-    border-radius: 10px;
-    padding: 1rem;
-    margin-top: 5px;
+    background-color: rgb(48, 56, 33);
+    
 }
-
-#written-by-container a {
-    color: #000;
+span{
+    color: rgb(42, 165, 93);
 }

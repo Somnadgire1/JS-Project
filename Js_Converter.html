@@ -4,37 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>convertor</title>
     <link rel="stylesheet" href="Js_Converter.css">
     <script src="Js_Converter.js" defer></script>
-    <title>JS_Converter</title>
-    </head>
-
+</head>
 <body>
-    <main>
-        <h1>Base Converter</h1>
+    <h1>Convertor</h1>
+    <div id="all">
+    <div class="main">   
+    <div class="container">
 
-        <div id="select-container">
-            <select id="from-select">
-            <option value="from-binary">Binary</option>
-            <option value="from-decimal">Decimal</option>
-            <option value="from-hexadecimal">Hexadecimal</option>
-            <option value="from-octal">Octal</option>
-         </select>
-            <span>to</span>
-            <select id="to-select">
-            <option value="to-binary">Binary</option>
-            <option value="to-decimal">Decimal</option>
-            <option value="to-hexadecimal">Hexadecimal</option>
-            <option value="to-octal">Octal</option>
-         </select>
-        </div>
+    <select id="from-input" onchange="getselectedvalue()">
+        <option selected>Binary</option>
+        <option>Octal</option>
+        <option>Decimal</option>
+        <option>Hexadecimal</option>
+    </select>
+</div>
+    <h2>To</h2>
 
-        <div id="input-container">
-            <input type="text" id="from-input" placeholder="Binary Number">
-            <span id="error"></span>
-            <button id="convert-button">Convert</button>
-            <input type="text" id="to-input" placeholder="Binary Number" readonly>
-        </div>
-    </main>
+    <select  id="to-input" onchange="toselectedvalue()">
+        <option>Decimal</option>
+        <option>Octal</option>
+        <option>Binary</option>
+        <option>Hexadecimal</option>
+    </select>
+   </div>
+
+    <div class="value">
+        <span class="heading">Binary</span> 
+        <input type="text" id="number" placeholder="enter value">
+    <div class="re">
+    <span id="error"></span>
+        <button class="swap"><span>Swap</span></button>
+        <button class="submit"><span>Convert</span></button>
+        <button class="reset"><span>Reset</span></button>
+    </div>
+    <div class="answer">
+        <span class="sheading">Decimal</span>
+        <input type="text" id="output" placeholder="output value">
+    </div>
+    </div>
+</div>
 </body>
 </html>
+
