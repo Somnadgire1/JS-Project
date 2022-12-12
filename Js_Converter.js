@@ -1,38 +1,38 @@
-
+// -------Text Content change-first-----
 function getselectedvalue(){
 
-    var selectedvalue = document.getElementById("from-input").value;
+    var selectedvaluefrm = document.getElementById("from-input").value;
 
     const heading =document.querySelector(".heading");
 
 
-if(selectedvalue==="Octal"){
+if(selectedvaluefrm==="Octal"){
       heading.textContent="Octal";
 }
-else if(selectedvalue==="Decimal"){
+else if(selectedvaluefrm==="Decimal"){
     heading.textContent="Decimal";
 }
-else if(selectedvalue==="Hexadecimal"){
+else if(selectedvaluefrm==="Hexadecimal"){
     heading.textContent="Hexadecimal";
 }
 else{
     heading.textContent="Binary";
 }
 }
-
+//  ------Text Content change-second------
 function toselectedvalue(){
 
-    var selectedvaluee = document.getElementById("to-input").value;
+    var selectedvalueto = document.getElementById("to-input").value;
 
     const sheading =document.querySelector(".sheading");
 
-if(selectedvaluee==="Octal"){
+if(selectedvalueto==="Octal"){
     sheading.textContent="Octal";
 }
-else if(selectedvaluee==="Decimal"){
+else if(selectedvalueto==="Decimal"){
   sheading.textContent="Decimal";
 }   
-else if(selectedvaluee==="Hexadecimal"){
+else if(selectedvalueto==="Hexadecimal"){
   sheading.textContent="Hexadecimal";
 }
 else{
@@ -40,96 +40,96 @@ else{
 }
 }
 
-
+// --------convert------
     const submit=document.querySelector(".submit");
     submit.addEventListener("click", donextstep);
 
     function donextstep(){
-    var selectedvalue = document.getElementById("from-input").value;
-    var selectedvaluee = document.getElementById("to-input").value;
+    var selectedvaluefrm = document.getElementById("from-input").value;
+    var selectedvalueto = document.getElementById("to-input").value;
 
-    if(selectedvalue==="Decimal" && selectedvaluee==="Binary"){
+    if(selectedvaluefrm==="Decimal" && selectedvalueto==="Binary"){
     const input =Number(document.getElementById("number").value);
     var bin = input.toString(2);
     document.getElementById("output").value=bin;
     }
 
-    else if(selectedvalue==="Decimal" && selectedvaluee==="Octal"){
+    else if(selectedvaluefrm==="Decimal" && selectedvalueto==="Octal"){
     const input =Number(document.getElementById("number").value);
     var bin = input.toString(8);
     document.getElementById("output").value=bin;
     }
-    else if(selectedvalue==="Decimal" && selectedvaluee==="Hexadecimal"){
+    else if(selectedvaluefrm==="Decimal" && selectedvalueto==="Hexadecimal"){
     const input =Number(document.getElementById("number").value);
     var bin = input.toString(16);
     document.getElementById("output").value=bin;
     }
-    else if(selectedvalue==="Decimal" && selectedvaluee==="Decimal"){
+    else if(selectedvaluefrm==="Decimal" && selectedvalueto==="Decimal"){
     const input =Number(document.getElementById("number").value);
     var bin = input;
     document.getElementById("output").value=bin;
     }
-    else if(selectedvalue==="Binary" && selectedvaluee==="Binary"){
+    else if(selectedvaluefrm==="Binary" && selectedvalueto==="Binary"){
         const input =Number(document.getElementById("number").value);
         var bin = input;
         document.getElementById("output").value=bin;
         }
-    else if(selectedvalue==="Binary" && selectedvaluee==="Octal"){
+    else if(selectedvaluefrm==="Binary" && selectedvalueto==="Octal"){
         const input =Number(document.getElementById("number").value);
         var bin = parseInt(input, 2).toString(8);
         document.getElementById("output").value=bin;    
         }
-    else if(selectedvalue==="Binary" && selectedvaluee==="Decimal"){
+    else if(selectedvaluefrm==="Binary" && selectedvalueto==="Decimal"){
         const input =Number(document.getElementById("number").value);
         var bin =parseInt(input, 2);
         document.getElementById("output").value=bin;    
         }
-    else if(selectedvalue==="Binary" && selectedvaluee==="Hexadecimal"){
+    else if(selectedvaluefrm==="Binary" && selectedvalueto==="Hexadecimal"){
         const input =Number(document.getElementById("number").value);
         var bin =parseInt(input, 2).toString(16);
         document.getElementById("output").value=bin;    
         }
-        else if(selectedvalue==="Octal" && selectedvaluee==="Octal"){
+        else if(selectedvaluefrm==="Octal" && selectedvalueto==="Octal"){
         const input =Number(document.getElementById("number").value);
         var bin =input;
         document.getElementById("output").value=bin;    
         }
-        else if(selectedvalue==="Octal" && selectedvaluee==="Decimal"){
+        else if(selectedvaluefrm==="Octal" && selectedvalueto==="Decimal"){
         const input =Number(document.getElementById("number").value);
         var bin =(parseInt(input,8));
         document.getElementById("output").value=bin;    
         }   
-        else if(selectedvalue==="Octal" && selectedvaluee==="Binary"){
+        else if(selectedvaluefrm==="Octal" && selectedvalueto==="Binary"){
             const input =Number(document.getElementById("number").value);
             var bin =(parseInt(input,8));
             const inputt =bin;
             var binn = inputt.toString(2);
         document.getElementById("output").value=binn;    
         }   
-        else if(selectedvalue==="Octal" && selectedvaluee==="Hexadecimal"){
+        else if(selectedvaluefrm==="Octal" && selectedvalueto==="Hexadecimal"){
             const input =Number(document.getElementById("number").value);
             var bin =(parseInt(input,8));
             const inputt =bin
             var binn = inputt.toString(16);
         document.getElementById("output").value=binn;    
         }   
-        else if(selectedvalue==="Hexadecimal" && selectedvaluee==="Hexadecimal"){
+        else if(selectedvaluefrm==="Hexadecimal" && selectedvalueto==="Hexadecimal"){
             const input =Number(document.getElementById("number").value);
             var bin =input;
             document.getElementById("output").value=bin;    
             }  
-        else if(selectedvalue==="Hexadecimal" && selectedvaluee==="Octal"){
+        else if(selectedvaluefrm==="Hexadecimal" && selectedvalueto==="Octal"){
             const input =document.getElementById("number").value;
             var din =parseInt(input,16);
             var bin = din.toString(8);
             document.getElementById("output").value=bin;  
             }  
-        else if(selectedvalue==="Hexadecimal" && selectedvaluee==="Decimal"){
+        else if(selectedvaluefrm==="Hexadecimal" && selectedvalueto==="Decimal"){
             const input =document.getElementById("number").value;
             var din =parseInt(input,16);
             document.getElementById("output").value=din;  
             } 
-        else if(selectedvalue==="Hexadecimal" && selectedvaluee==="binary"){
+        else if(selectedvaluefrm==="Hexadecimal" && selectedvalueto==="binary"){
             const input =document.getElementById("number").value;
             var din =parseInt(input,16);
             var bin = din.toString(2);
@@ -158,14 +158,14 @@ const swap=document.querySelector(".swap");
 swap.addEventListener("click",swapfunc);
 
 function swapfunc(){
-    var selectedvalue = document.getElementById("from-input").value;
-    var selectedvaluee = document.getElementById("to-input").value;
+    var selectedvaluefrm = document.getElementById("from-input").value;
+    var selectedvalueto = document.getElementById("to-input").value;
 
 var fse=document.getElementById("from-input");
 var sse=document.getElementById("to-input");
 
-fse.value=selectedvaluee;
-sse.value=selectedvalue;
+fse.value=selectedvalueto;
+sse.value=selectedvaluefrm;
 
 getselectedvalue();
 toselectedvalue();
